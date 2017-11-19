@@ -15,6 +15,7 @@ require('./lib/_mode-' + options.mode + '.js').run(options);
 
 cOpt.cook().then(function (options) {
 
+    console.log('running script for mode: ' + options.mode);
     require('./lib/_mode-' + options.mode + '.js').run(options);
 
 }).catch (function (e) {
