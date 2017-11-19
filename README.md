@@ -4,19 +4,26 @@ Mark Down File Manager is a CLI tool I have made to help me manage my personal c
 
 ## Getting started
 
-cd to the working dir where the markdown files are and use the -i option to initialize a new .mdfm folder. For now this will just create a config.yaml file in the folder, and copy the hard coded options to that yaml file. It is then possible to change options in that file, or give options from the command line.
+As of this writing I have not published this to npm, so it must be cloned in from github, and then installed globally, as this is a CLI tool.
+
+$ git clone https://github.com/dustinpfister/mdfm.git
+$ cd mdfm
+$ npm install -g
+
+## initialize a new .mdfm folder
+
+To initialize a new .mdfm folder cd to the working dir where the markdown files are and use the -i option to initialize a new .mdfm folder. For now this will just create a config.yaml file in the folder, and copy the hard coded options to that yaml file. It is then possible to change options in that file, or give options from the command line.
 
 ```
 $ cd path/to/markdown/files
 $ mdfm -i
 ```
 
+this will:
+* creates a new .mdfm folder in the working dir if not there to begin with.
+* creates or overwrites ./mdfm/config.yaml with had coded defaults.
 
-$ mdfm init
-
-* creates an .mdfm folder in the working dir if not there to begin with.
-* creates or overwrites ./mdfm/config.yaml
-* prompts for options to set for each config option
+When calling mdfm without any arguments the values set in config.yaml will be used, as such the values can be changed to any of the available modes.
 
 $ mdfm gen-reports
 
